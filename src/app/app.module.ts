@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SquarePipe } from './square.pipe';
+import { GreentextDirective } from './greentext.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SquarePipe,
+    GreentextDirective
   ],
   imports: [
     BrowserModule,

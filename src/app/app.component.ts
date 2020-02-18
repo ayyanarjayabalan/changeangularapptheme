@@ -7,12 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'changetheme';
+  viewMode = '0';
+
+  students = ['Ayyanar', 'Jayabalan'];
 
   ngOnInit() {
     var st = document.getElementById('themeCSS') as HTMLLinkElement;
     if (localStorage.getItem('theme')) {
       st.href = localStorage.getItem('theme');
     }
+  }
+
+  remove(index: number) {
+    this.students.splice(index, 1);
   }
 
   changeTheme() {
