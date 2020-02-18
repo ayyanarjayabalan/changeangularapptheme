@@ -52,4 +52,31 @@ SQUARE of 9 : {{ 9 | square: 3}}
     <div *ngSwitchDefault>View Mode default</div>
 </div>
 
+<!-- ng container -->
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Cost</td>
+    </tr>
+    <ng-container *ngFor="let item of courses">
+        <ng-container *ngIf="item.cost <= 200">
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.cost}}</td>
+            </tr>
+        </ng-container>
+    </ng-container>
+</table>
+<hr>
+<app-accordian [courses]="courses">
+    <div class="fourty">
+        Expert Level Courses
+    </div>
+    <div class="fifty">
+        Total Courses: 50
+    </div>
+</app-accordian>
+
+<a [routerLink]="['/admin']" routerLinkActive="router-link-active">Admin</a>
+
 <router-outlet></router-outlet>

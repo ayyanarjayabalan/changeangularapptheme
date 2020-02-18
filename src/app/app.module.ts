@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SquarePipe } from './square.pipe';
 import { GreentextDirective } from './greentext.directive';
+import { AccordianComponent } from './shared/accordian.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SquarePipe,
-    GreentextDirective
+    GreentextDirective,
+    AccordianComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,12 @@ export class AppComponent implements OnInit {
 
   students = ['Ayyanar', 'Jayabalan'];
 
+  courses = [{
+    id: 1, name: 'Angular', cost: 100
+  }, {
+    id: 2, name: '.Net', cost: 200
+  }];
+
   ngOnInit() {
     var st = document.getElementById('themeCSS') as HTMLLinkElement;
     if (localStorage.getItem('theme')) {

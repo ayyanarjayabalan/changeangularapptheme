@@ -1,0 +1,19 @@
+<ng-content select=".fourty"></ng-content>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Cost</td>
+    </tr>
+    <ng-container *ngFor="let item of courses">
+        <ng-container *ngIf="item.cost <= 200">
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.cost}}</td>
+            </tr>
+        </ng-container>
+    </ng-container>
+</table>
+
+<ng-content select=".fifty">
+
+</ng-content>
